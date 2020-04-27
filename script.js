@@ -1,5 +1,5 @@
 //TODO: Convert all functions and any other possible elements to ES6
-
+//Sgrey Github
 /**
  * Update the output text as you type in the textarea
  */
