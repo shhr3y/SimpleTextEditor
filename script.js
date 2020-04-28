@@ -1,37 +1,38 @@
-//TODO: Convert all functions and any other possible elements to ES6
-//Sgrey Github
-/**
- * Update the output text as you type in the textarea
- */
+
+
+
+var outputText = document.getElementById("text-output");
+
+
+
 function updateText(){
-  
+  var content = document.getElementById("text-input").value;
+  outputText.innerHTML = content;
 }
 
-/**
- * Toggle the bold class for the output text
- */
 function makeBold(elem){
-  
+  elem.classList.toggle("active");
+  outputText.classList.toggle("bold");
 }
 
-/**
- * Toggle the italic class for the output text
- */
 function makeItalic(elem){
-  
+  elem.classList.toggle("active");
+  outputText.classList.toggle("italic");
 }
 
-/**
- * Toggle the underline class for the output text
- */
 function makeUnderline(elem){
-   
+  elem.classList.toggle("active");
+  outputText.classList.toggle("underline");
 }
 
-/**
- * Toggle the style textAlign attribute
- * Toggle the active state for the align butttons
- */
 function alignText(elem, alignType){
- 
+  elem.classList.toggle("active");
+  outputText.style.textAlign = alignType;
+  var buttonList = document.getElementsByClassName("align");
+  for(let i=0;i<buttonList.length;i++){
+    if(buttonList[i] == elem){
+    }else{
+      buttonList[i].classList.remove("active");
+    }
+  }
 }
